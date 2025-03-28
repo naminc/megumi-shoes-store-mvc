@@ -82,7 +82,7 @@
                             <div class="main-menu-area">
                                 <div class="main-menu">
                                     <!-- main menu navbar start -->
-                                    <?php if (session_status() === PHP_SESSION_NONE) session_start(); ?>
+                                    
                                     <nav class="desktop-menu">
                                         <ul>
                                             <li class="active"><a href="/">Trang chủ</a></li>
