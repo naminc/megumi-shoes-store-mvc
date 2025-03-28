@@ -5,9 +5,6 @@ require_once 'middleware/AuthMiddleware.php'; // Include middleware
 class AuthController extends Controller {
 
     public function login() {
-        // Kiểm tra nếu đã đăng nhập thì chuyển hướng
-        AuthMiddleware::redirectIfLoggedIn();
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $email = trim($_POST['email']);
             $password = $_POST['password'];
@@ -57,9 +54,6 @@ class AuthController extends Controller {
     }
 
     public function register() {
-        // Kiểm tra nếu đã đăng nhập thì chuyển hướng
-        AuthMiddleware::redirectIfLoggedIn();
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $fullname = trim($_POST['fullname']);
             $email = trim($_POST['email']);
