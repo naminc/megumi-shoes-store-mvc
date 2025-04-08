@@ -62,14 +62,8 @@ class AuthController extends Controller {
 
             $userModel = $this->model('User');
             $errors = [];
-            if ($userModel->checkFullname($fullname)) {
-                $errors['fullname'] = 'Họ và Tên đã tồn tại!';
-            }
             if ($userModel->checkEmail($email)) {
                 $errors['email'] = 'Email đã được sử dụng bởi tài khoản khác!';
-            }
-            if (strlen($fullname) < 6 || strlen($fullname) > 32) {
-                $errors['fullname'] = 'Họ và Tên phải từ 6 đến 32 ký tự!';
             }
             if (strlen($password) < 6 || strlen($password) > 32) {
                 $errors['password'] = 'Mật khẩu phải từ 6 đến 32 ký tự!';

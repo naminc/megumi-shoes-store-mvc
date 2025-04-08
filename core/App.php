@@ -8,7 +8,6 @@ class App {
     protected $params = [];
     protected $controllerName; // Lưu tên controller dưới dạng chuỗi
     protected $request; // Lưu đối tượng Request
-
     public function __construct() {
         $url = $this->parseUrl();
 
